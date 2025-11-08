@@ -9,7 +9,7 @@ interface RadioGroupProps {
 }
 
 const RadioGroup = React.forwardRef<HTMLDivElement, RadioGroupProps>(
-  ({ className, children, ...props }, ref) => {
+  ({ className, children, value, onValueChange, ...props }, ref) => {
     return (
       <div ref={ref} className={cn("grid gap-2", className)} {...props}>
         {children}
