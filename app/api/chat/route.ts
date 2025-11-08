@@ -26,8 +26,8 @@ export async function POST(request: Request) {
 
     // Initialize Gemini AI
     const genAI = new GoogleGenerativeAI(apiKey);
-    // Using gemini-pro model (compatible with SDK v0.19.0)
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    // Using gemini-1.5-pro model (stable and compatible with SDK v0.21.0)
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
 
     // Format date for better readability
     const year = birthDate.substring(0, 4);
